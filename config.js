@@ -1,6 +1,11 @@
 try{
-  var config_ws_address = process.env['WS_ADDRESS'] || ("ws://" + window.location.host + ":1337");
-} catch (ex) {}
+  var config_ws_address = (undefined !== window && window.location.host)
+} catch (ex) {
+  config_ws_address = process.env['WS_ADDRESS'];
+}
+
+config_ws_address = "ws://" + config_ws_address + ":1337";
+console.log("use address: %s", config_ws_address);
 
 var config_ship_width = 60;
 var config_ship_width = 60;
