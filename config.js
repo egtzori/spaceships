@@ -1,5 +1,5 @@
 try{
-  var config_ws_address = "ws://" + window.location.host + ":1337";
+  var config_ws_address = process.env['WS_ADDRESS'] || ("ws://" + window.location.host + ":1337");
 } catch (ex) {}
 
 var config_ship_width = 60;
