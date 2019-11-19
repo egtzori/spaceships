@@ -1,4 +1,6 @@
-var config_ws_address = "ws://192.168.2.138:1337";
+try{
+  var config_ws_address = "ws://" + window.location.host + ":1337";
+} catch (ex) {}
 
 var config_ship_width = 60;
 var config_ship_width = 60;
